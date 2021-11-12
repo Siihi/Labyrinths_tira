@@ -9,6 +9,10 @@ Study program: TKT
 
 Project language: Python and English
 
+## Documentation
+
+[Project specification](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/project_specification.md)
+
 ### Weekly reports
 
 [Weekly report 1](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/weekly_report_1.md)
