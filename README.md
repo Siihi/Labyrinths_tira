@@ -1,5 +1,6 @@
 # Labyrinths
 ![GitHub Actions](https://github.com/Siihi/Labyrinths_tira//workflows/CI/badge.svg)
+![codecov](https://codecov.io/gh/Siihi/Labyrinths_tira/branch/main/graph/badge.svg?token=5YRqisc03R)
 
 Labyrinth or maze generator comparing two different algorithms.
 
