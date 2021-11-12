@@ -1,4 +1,6 @@
 # Labyrinths
+![GitHub Actions](https://github.com/Siihi/Labyrinths_tira//workflows/CI/badge.svg)
+
 Labyrinth or maze generator comparing two different algorithms.
 
 ## Information
