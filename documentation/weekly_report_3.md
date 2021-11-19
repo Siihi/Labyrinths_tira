@@ -1,6 +1,6 @@
 # Weekly report 3
 
-Time spent: 15 hours
+Time spent: 16 hours
 
 ## Development this week
 
@@ -8,6 +8,7 @@ Time spent: 15 hours
 - Wrote tests for prim.py
 - Setup pylint for code quality
 - Research on Aldous-Broder algorithm
+- Made a testing document and a user guide
 
 ## Problems
 
