@@ -12,43 +12,52 @@ class Prim:
         self.y = y
         self.x = x
 
-        #Starting points are randomised and checked so that they are not on the edges.
-        self.start_y = random.randint(0, y-1)
-        self.start_x = random.randint(0, x-1)
+        self.generate_maze()
 
-        if self.start_y == 0:
-            self.start_y += 1
-        if self.start_y == y-1:
-            self.start_y -= 1
+        coords = self.randomized_start()
+        self.generate_start(coords[0], coords[1])
+        
+        #Start of Prim's algorithm.
+        self.prims_algorithm()
 
-        if self.start_x == 0:
-            self.start_x += 1
-        if self.start_x == x-1:
-            self.start_x -= 1
-
+    def generate_maze(self):
         #The base of the maze is generated with the use of Maze().
         self.commands = maze.Maze()
     
-        self.maze = self.commands.setmaze(x, y)
+        self.maze = self.commands.setmaze(self.x, self.y)
         self.walls = []
 
+    def randomized_start(self):
+        start_y = random.randint(0, self.y-1)
+        start_x = random.randint(0, self.x-1)
+
+        if start_y == 0:
+            start_y += 1
+        if start_y == self.y-1:
+            start_y -= 1
+
+        if start_x == 0:
+            start_x += 1
+        if start_x == self.x-1:
+            start_x -= 1
+        return (start_y, start_x)
+
+
+    def generate_start(self, start_y, start_x):
         #The start point of the maze is marked as part of the routes and the tiles next to it are marked as walls temporarily.
-        self.maze[self.start_y][self.start_x] = "x"
+        self.maze[start_y][start_x] = "x"
 
-        self.walls.append([self.start_y-1, self.start_x])
-        self.maze[self.start_y-1][self.start_x] = "|"
+        self.walls.append([start_y-1, start_x])
+        self.maze[start_y-1][start_x] = "|"
 
-        self.walls.append([self.start_y+1, self.start_x])
-        self.maze[self.start_y+1][self.start_x] = "|"
+        self.walls.append([start_y+1, start_x])
+        self.maze[start_y+1][start_x] = "|"
         
-        self.walls.append([self.start_y, self.start_x-1])
-        self.maze[self.start_y][self.start_x-1] = "|"
+        self.walls.append([start_y, start_x-1])
+        self.maze[start_y][start_x-1] = "|"
 
-        self.walls.append([self.start_y, self.start_x+1])
-        self.maze[self.start_y][self.start_x+1] = "|"
-
-        #Start of Prim's algorithm.
-        self.prims_algorithm()
+        self.walls.append([start_y, start_x+1])
+        self.maze[start_y][start_x+1] = "|"
 
     def nearby_maze(self, wall):
         n_maze = 0
@@ -150,6 +159,3 @@ class Prim:
 
         self.commands.printmaze(self.maze)
         return True
-
-if __name__ == "__main__":
-    Prim(5,5)
