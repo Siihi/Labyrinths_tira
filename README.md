@@ -15,6 +15,8 @@ Project language: Python and English
 
 [Testing document](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/testing_document.md)
 
+[User guide](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/user_guide.md)
+
 ### Weekly reports
 
 [Weekly report 1](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/weekly_report_1.md)
