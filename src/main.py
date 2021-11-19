@@ -1,6 +1,8 @@
 import prim
+import maze
 
 def main():
+    mazecommands = maze.Maze()
     while True:
         print("Welcome to the labyrinth program!")
         print("1: Prim's randomized algorithm")
@@ -25,7 +27,6 @@ def main():
             except:
                 print("Please type a number!")
                 break
-
             prim.Prim(x,y)
 
         elif choice == 2:
