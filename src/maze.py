@@ -1,5 +1,5 @@
 class Maze:
-    def setmaze(self, x, y):
+    def setmaze(self, xcoord, ycoord):
         """Responsible for generating a set size maze.
 
         Args:
@@ -11,8 +11,8 @@ class Maze:
         """
         maze = []
         xlist = []
-        for i in range(y):
-            for j in range(x):
+        for i in range(ycoord):
+            for j in range(xcoord):
                 xlist.append("o")
             maze.append(xlist)
             xlist = []
