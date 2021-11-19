@@ -8,9 +8,9 @@ class TestPrim(unittest.TestCase):
         self.prim = prim.Prim(5,5)
 
     def test_maze_y_correct(self):
-        self.assertEqual(self.prim.y, 5)
+        self.assertEqual(self.prim.ycoord, 5)
     def test_maze_x_correct(self):
-        self.assertEqual(self.prim.x, 5)
+        self.assertEqual(self.prim.xcoord, 5)
 
     def test_start_y_inside_range(self):
         randstart = self.prim.randomized_start()
