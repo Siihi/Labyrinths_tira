@@ -14,6 +14,10 @@ The newest testing coverage information can be found in Codecov.
 
 Used input was Prim(5,5) meaning a 5 x 5 maze using randomized Prim's algorithm was generated and used for testing.
 
+## aldous_broder.py
+
+Has not been tested yet.
+
 ## Testing report
 
 ![Testing report](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/pictures/testing.png)

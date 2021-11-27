@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 import maze
 
 class Prim:
@@ -108,6 +109,7 @@ class Prim:
     def prims_algorithm(self):
         """Responsible for generating the maze with the use of Prim's algorithm."""
         #Checking if there's walls left and picking one of the walls at random.
+        start_time = datetime.now()
         while self.walls:
             wall = self.walls[(random.randint(0, len(self.walls)))-1]
 
@@ -157,5 +159,11 @@ class Prim:
                 if self.maze[i][j] == "o":
                     self.maze[i][j] = "|"
 
+        stop_time = datetime.now()
+        self.time_taken = stop_time - start_time
+
         self.commands.printmaze(self.maze)
         return True
+
+    def __str__(self):
+        return str(self.time_taken)

@@ -1,10 +1,11 @@
 import prim
+import aldous_broder
 
 def main():
     while True:
         print("Welcome to the labyrinth program!")
         print("1: Prim's randomized algorithm")
-        print("2: TBC")
+        print("2: Aldous-Broder algorithm")
         print("0: Exit")
 
         try:
@@ -25,10 +26,22 @@ def main():
             except ValueError:
                 print("Please type a number!")
                 break
-            prim.Prim(xcoord, ycoord)
+            primtime = prim.Prim(xcoord, ycoord)
+            print(f"The amount of time taken: {primtime}")
 
         elif choice == 2:
-            pass
+            print("Choose the size of the maze:")
+            try:
+                xcoord = int(input("Number of columns:"))
+            except ValueError:
+                print("Please type a number!")
+                break
+            try:
+                ycoord = int(input("Number of rows:"))
+            except ValueError:
+                print("Please type a number!")
+                break
+            aldous_broder.AldousBroder(xcoord, ycoord)
 
         elif choice == 0:
             break
