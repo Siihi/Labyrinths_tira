@@ -28,3 +28,5 @@ Project language: Python and English
 [Weekly report 3](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/weekly_report_3.md)
 
 [Weekly report 4](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/weekly_report_4.md)
+
+[Weekly report 5](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/weekly_report_5.md)

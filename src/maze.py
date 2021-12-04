@@ -28,5 +28,9 @@ class Maze:
             True, after the printing is finished.
         """
         for line in maze:
-            print(line)
+            linestr = ""
+            for char in line:
+                linestr += " "
+                linestr += char
+            print(linestr)
         return True

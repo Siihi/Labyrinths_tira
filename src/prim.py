@@ -7,8 +7,8 @@ class Prim:
         """Responsible for initiating all the needed components for Prim's algorithm.
 
         Args:
-            x: Width of the maze
-            y: Height of the maze
+            xcoord: Width of the maze
+            ycoord: Height of the maze
         """
         self.ycoord = ycoord
         self.xcoord = xcoord
@@ -22,13 +22,19 @@ class Prim:
         self.prims_algorithm()
 
     def generate_maze(self):
-        #The base of the maze is generated with the use of Maze().
+        """Responsible for generating the base of the maze with the use of Maze().
+        """
         self.commands = maze.Maze()
 
         self.maze = self.commands.setmaze(self.xcoord, self.ycoord)
         self.walls = []
 
     def randomized_start(self):
+        """Responsible for randomizing the starting point of the maze.
+
+        Returns:
+            The starting coordinates.
+        """
         start_y = random.randint(0, self.ycoord-1)
         start_x = random.randint(0, self.xcoord-1)
 
@@ -45,8 +51,12 @@ class Prim:
 
 
     def generate_start(self, start_y, start_x):
-        #The start point of the maze is marked as part of the routes
-        #and the tiles next to it are marked as walls temporarily.
+        """Responsible for marking the starting point and the first neighbours.
+
+        Args:
+            start_y: y-coordinate
+            start_x: x-coordinate
+        """
         self.maze[start_y][start_x] = "x"
 
         self.walls.append([start_y-1, start_x])
@@ -62,6 +72,14 @@ class Prim:
         self.maze[start_y][start_x+1] = "|"
 
     def nearby_maze(self, wall):
+        """Responsible for marking the amount of nearby paths.
+
+        Args:
+            wall: The current cell.
+
+        Returns:
+            The amount of nearby paths.
+        """
         n_maze = 0
         if self.maze[wall[0]-1][wall[1]] == "x":
             n_maze += 1
@@ -74,6 +92,11 @@ class Prim:
         return n_maze
 
     def new_walls(self, wall):
+        """Responsible for adding new neighbours to the list.
+
+        Args:
+            wall: The current cell.
+        """
         #Up
         if wall[0] != 0:
             if self.maze[wall[0]-1][wall[1]] != "x":
@@ -100,6 +123,14 @@ class Prim:
                 self.walls.append([wall[0], wall[1]-1])
 
     def delete_walls(self, wall):
+        """Responsible for deleting a cell from the neighbours list.
+
+        Args:
+            wall: The cell being removed.
+
+        Returns:
+            True if the cell was found, otherwise False.
+        """
         for i in self.walls:
             if i[0] == wall[0] and i[1] == wall[1]:
                 self.walls.remove(i)
@@ -160,10 +191,15 @@ class Prim:
                     self.maze[i][j] = "|"
 
         stop_time = datetime.now()
-        self.time_taken = stop_time - start_time
+        self.time_taken = (stop_time - start_time).total_seconds()
 
         self.commands.printmaze(self.maze)
         return True
 
     def __str__(self):
+        """Responsible for returning the time taken for the maze to be generated.
+
+        Returns:
+            Time taken for generating the maze.
+        """
         return str(self.time_taken)
