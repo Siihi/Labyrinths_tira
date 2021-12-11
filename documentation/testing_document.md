@@ -10,14 +10,18 @@ The newest testing coverage information can be found in Codecov.
 
 ## prim.py
 
-98% tested using automated tests.
+96% tested using automated tests.
 
-Used input was Prim(5,5) meaning a 5 x 5 maze using randomized Prim's algorithm was generated and used for testing.
+The input used is Prim(5,5) meaning a 5 x 5 maze using randomized Prim's algorithm is generated and used for testing.
 
 ## aldous_broder.py
 
-Has not been tested yet.
+96% tested using automated tests.
+
+The input used is AldousBroder(5,5) meaning a 5 x 5 maze using the Aldous-Broder algorithm is generated and used for testing.
 
 ## Testing report
 
-![Testing report](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/pictures/testing.png)
+The testing report can be found in codecov.
+
+[![codecov](https://codecov.io/gh/Siihi/Labyrinths_tira/branch/main/graph/badge.svg?token=5YRqisc03R)](https://codecov.io/gh/Siihi/Labyrinths_tira)

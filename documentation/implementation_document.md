@@ -11,12 +11,19 @@ When a new cell is chosen in randomized Prim's algorithm, the two cells that the
 
 ## Aldous-Broder algorithm
 
-TBC
+When a new cell is chosen in the Aldous-Broder algorithm, one of the adjacent cells are chosen and if it and the cells next to it aren't visited, it is made the current cell and added to the maze as a passage. If the adjacent cell or the cells next to it have been visited, the next adjacent cell is chosen.
 
 ## Comparison
 
-The time complexity of randomized Prim's algorithm is O(|V|²). It takes about 0.4 seconds to make a 100 x 100 maze utilizing it.
+![Time comparison](https://github.com/Siihi/Labyrinths_tira/blob/main/documentation/pictures/time_comparison.jpg)
+
+In smaller mazes the time taken is similar in both mazes. At size 50 x 50 the Aldous-Broder clearly takes a longer time at 3,3 seconds and with each increase in size, requires substantially more time with 53,2 seconds for a 200 x 200 maze.
+In randomized Prim's algorithm the time taken doesn't fluctuate much compared to the Aldous-Broder, with a time of 2,3 seconds for a 200 x 200 maze. 
+
+Thus it can be stated that the randomized Prim's algorithm is clearly the faster algorithm.
 
 ## Flaws and improvements
 
 Randomized Prim's algorithm could be made faster with the use of a binary heap or a fibonacci heap.
+
+Aldous-Broder algorithm cannot be made faster and it is known as one of slowest and most inefficient maze generating algorithms there is.
