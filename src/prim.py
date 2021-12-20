@@ -194,7 +194,7 @@ class Prim:
         self.time_taken = (stop_time - start_time).total_seconds()
 
         self.commands.printmaze(self.maze)
-        return True
+        return self.maze
 
     def __str__(self):
         """Responsible for returning the time taken for the maze to be generated.
@@ -203,3 +203,4 @@ class Prim:
             Time taken for generating the maze.
         """
         return str(self.time_taken)
+
