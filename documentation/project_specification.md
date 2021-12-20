@@ -4,7 +4,7 @@ This project aims to compare two different maze or labyrinth generation algorith
 
 ### Algorithms
 
-The algorithms used are randomized Prim's algorithm and an undecided one. (Possibly Wilson's algorithm, recursive division method or Aldous-Broder algorithm)
+The algorithms used are randomized Prim's algorithm and Aldous-Broder algorithm.
 This program is meant to show the differences between maze generating algorithms.
 
 ### Input

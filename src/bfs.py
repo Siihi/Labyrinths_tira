@@ -26,7 +26,7 @@ class BreadthFirstSearch:
             if self.compare[cell[0]-1][cell[1]] == "x":
                 if (cell[0]-1,cell[1]) not in self.visited and (cell[0]-1,cell[1]) not in self.nearby:
                     self.nearby.append((cell[0]-1,cell[1]))
-        
+
         if cell[0] != len(self.compare)-1:
             if self.compare[cell[0]+1][cell[1]] == "x":
                 if (cell[0]+1,cell[1]) not in self.visited and (cell[0]+1,cell[1]) not in self.nearby:
@@ -59,6 +59,3 @@ class BreadthFirstSearch:
             self.amount += 1
             self.find_nearby(cell)
 
-if __name__ == "__main__":
-    mazems = [["o","o","o","o","o"],["o","x","x","x","o"],["o","o","o","x","o"],["o","x","x","x","o"],["o","o","o","o","o"]]
-    BreadthFirstSearch(mazems)
