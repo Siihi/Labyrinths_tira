@@ -6,6 +6,8 @@ The newest testing coverage information can be found in Codecov.
 
 The integrity of the mazes is checked with a breadth-first search, found [here](https://github.com/Siihi/Labyrinths_tira/blob/main/src/bfs.py).
 
+The code has a pylint score of 9.67.
+
 ## maze.py
 
 100% tested using automated tests.
